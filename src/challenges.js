@@ -97,41 +97,48 @@ function fizzBuzz(numberlist) {
 }
 
 // Desafio 9
+function vogalForNumber(vogal) {
+  if (vogal === 'a') return '1';
+
+  if (vogal === 'e') return '2';
+
+  if (vogal === 'i') return '3';
+
+  if (vogal === 'o') return '4';
+
+  if (vogal === 'u') return '5';
+
+return vogal;
+}
+
 function encode(string) {
   let newCode = '';
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 'a') {
-      newCode += '1';
-    } else if (string[index] === 'e') {
-      newCode += '2';
-    } else if (string[index] === 'i') {
-      newCode += '3';
-    } else if (string[index] === 'o') {
-      newCode += '4';
-    } else if (string[index] === 'u') {
-      newCode += '5';
-    } else {
-      newCode += string[index];
-    }
+    let vogal = string[index];
+    newCode += vogalForNumber(vogal);
   }
   return newCode;
 }
+
+function numberForVogal(number) {
+  if (number === '1') return 'a';
+
+  if (number === '2') return 'e';
+
+  if (number === '3') return 'i';
+
+  if (number === '4') return 'o';
+
+  if (number === '5') return 'u';
+
+return number;
+}
+
 function decode(string) {
   let newCode = '';
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === '1') {
-      newCode += 'a';
-    } else if (string[index] === '2') {
-      newCode += 'e';
-    } else if (string[index] === '3') {
-      newCode += 'i';
-    } else if (string[index] === '4') {
-      newCode += 'o';
-    } else if (string[index] === '5') {
-      newCode += 'u';
-    } else {
-      newCode += string[index];
-    }
+    let number = string[index];
+    newCode += numberForVogal(number);
   }
   return newCode;
 }
