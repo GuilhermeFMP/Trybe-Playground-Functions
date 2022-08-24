@@ -144,9 +144,22 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techNames, nome) {
+  let technologies = techNames.sort();
+  let objectList = [];
+  if (techNames.length === 0) {
+    return 'Vazio!';
+  }
+  for (let index = 0; index < technologies.length; index += 1) {
+    objectList.push(({
+      tech: technologies[index],
+      name: nome,
+    }));
+  }
+  return objectList;
 }
+
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 module.exports = {
   calcArea,
