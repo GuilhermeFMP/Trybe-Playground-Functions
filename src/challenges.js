@@ -12,21 +12,21 @@ function calcArea(base, altura) {
 }
 
 // Desafio 3
-function splitSentence(string) {
-  let array = string.split(' ');
+function splitSentence(text) {
+  let array = text.split(' ');
 
   return array;
 }
 
 // Desafio 4
-function concatName(array) {
+function concatName(textlist) {
   let primeiroNome = '';
   let segundoNome = '';
-  for (let index = 0; index < array.length; index += 1) {
-    if (index === array.length - 1) {
-      primeiroNome += array[index];
+  for (let index = 0; index < textlist.length; index += 1) {
+    if (index === textlist.length - 1) {
+      primeiroNome += textlist[index];
     } else if (index === 0) {
-      segundoNome += array[index];
+      segundoNome += textlist[index];
     }
   }
   let nomeComcatenato = `${primeiroNome}, ${segundoNome}`;
@@ -43,12 +43,12 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
+function highestCount(numbers) {
   let count = 0;
-  let maiorNumero = Math.max.apply(null, array);
+  let maiorNumero = Math.max.apply(null, numbers);
 
-  for (let index = 0; index < array.length; index += 1) {
-    if (maiorNumero === array[index]) {
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (maiorNumero === numbers[index]) {
       count += 1;
     }
   }
@@ -73,20 +73,27 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(array) {
-  let newArray = [];
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      newArray.push('fizzBuzz');
-    } else if (array[index] % 3 === 0) {
-      newArray.push('fizz');
-    } else if (array[index] % 5 === 0) {
-      newArray.push('buzz');
-    } else {
-      newArray.push('bug!');
-    }
+function dividedFor3and5(number, divider) {
+  return number % divider === 0;
+}
+
+function getText(number) {
+  if (dividedFor3and5(number, 3) && dividedFor3and5(number, 5)) return 'fizzBuzz';
+
+  if (dividedFor3and5(number, 3)) return 'fizz';
+
+  if (dividedFor3and5(number, 5)) return 'buzz';
+
+  return 'bug!';
+}
+
+function fizzBuzz(numberlist) {
+  let textlist = [];
+  for (let index = 0; index < numberlist.length; index += 1) {
+    let number = numberlist[index];
+    textlist.push(getText(number));
   }
-  return newArray;
+  return textlist;
 }
 
 // Desafio 9
