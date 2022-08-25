@@ -108,7 +108,7 @@ function vogalForNumber(vogal) {
 
   if (vogal === 'u') return '5';
 
-return vogal;
+  return vogal;
 }
 
 function encode(string) {
@@ -131,7 +131,7 @@ function numberForVogal(number) {
 
   if (number === '5') return 'u';
 
-return number;
+  return number;
 }
 
 function decode(string) {
