@@ -62,27 +62,18 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function filterInt(valor) {
-  if (/^(\-|\+)?([0-9]+|Infinity)$/.test(valor)) { return Number(valor); }
-  return NaN;
-}
-
 function hydrate(glass) {
   let numbers = glass.match(/\d+/g);
-  let numeros = '';
   let sum = 0;
   for (let index = 0; index < numbers.length; index += 1) {
-    numeros += numbers[index];
+    sum += Number(numbers[index]);
   }
-
-  let numeros2 = filterInt(numeros);
-  for (let index = 0; index < numeros2.length; index += 1) {
-    sum += numeros2[index];
+  let valor = String(sum);
+  if (sum === 1) {
+    return `${valor} copo de água`;
   }
-  return numeros2;
+  return `${valor} copos de água`;
 }
-
-// console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
