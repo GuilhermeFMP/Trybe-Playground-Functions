@@ -1,5 +1,5 @@
 
-# Projeto Lessons Learned
+# Projeto Playground Functions
 
 Segundo projeto fornecido pela instituição Trybe, onde tivemos que realizar funções com as lições que aprendemos.
 
