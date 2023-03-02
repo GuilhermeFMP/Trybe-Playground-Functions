@@ -11,13 +11,18 @@ function tem11Numeros(telefone) {
   }
 }
 
+function addCount(num1, num2) {
+  if (num1 === num2) {
+    return 1;
+  }
+  return 0;
+}
+
 function maisDeTres(nums) {
   for (let index = 0; index < nums.length; index += 1) {
     let count = 0;
     for (let index2 = 0; index2 < nums.length; index2 += 1) {
-      if (nums[index] === nums[index2]) {
-        count += 1;
-      }
+      count += addCount(nums[index], nums[index2]);
     }
     if (count >= 3) {
       return true;
@@ -57,8 +62,26 @@ function generatePhoneNumber(numerosTelefone) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function sidesCheck(a, b, c) {
+  if ((a + b > c) && (a + c > b) && (b + c > a)) {
+    return true;
+  }
+  return false;
+}
+
+function positiveCheck(a, b, c) {
+  if ((a > 0) && (b > 0) && (c > 0)) {
+    return true;
+  }
+  return false;
+}
+
+function triangleCheck(a, b, c) {
+  if ((sidesCheck(a, b, c)) && positiveCheck(a, b, c)) {
+    return true;
+  }
+
+  return false;
 }
 
 // Desafio 13

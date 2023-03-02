@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(parameter1, parameter2) {
-  if (parameter1 === true && parameter2 === true) {
+  if (parameter1 && parameter2) {
     return true;
   }
   return false;
@@ -20,15 +20,8 @@ function splitSentence(text) {
 
 // Desafio 4
 function concatName(textlist) {
-  let primeiroNome = '';
-  let segundoNome = '';
-  for (let index = 0; index < textlist.length; index += 1) {
-    if (index === textlist.length - 1) {
-      primeiroNome += textlist[index];
-    } else if (index === 0) {
-      segundoNome += textlist[index];
-    }
-  }
+  let segundoNome = textlist[0];
+  let primeiroNome = textlist.pop();
   let nomeComcatenato = `${primeiroNome}, ${segundoNome}`;
   return nomeComcatenato;
 }
