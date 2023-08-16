@@ -19,7 +19,7 @@ Aprendi nesse projeto a utilizar o Javascript e suas funcionalidades como Funç�
 Instalação com npm
 
 ```bash
-  git clone git@github.com:GuilhermeFMP/Playground-Functions.git
+  git clone git@github.com:GuilhermeFMP/Trybe-Playground-Functions.git
   cd Playground-Functions
   npm install
 ```
