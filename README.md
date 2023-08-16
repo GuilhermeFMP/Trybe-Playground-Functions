@@ -20,7 +20,7 @@ Instalação com npm
 
 ```bash
   git clone git@github.com:GuilhermeFMP/Trybe-Playground-Functions.git
-  cd Playground-Functions
+  cd Trybe-Playground-Functions
   npm install
 ```
     
